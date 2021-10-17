@@ -20,7 +20,7 @@ Welcome to contact phuang@bu.edu if you encounter any issue on compiling and exe
 
 
 
-## Class Discriptions
+## Class Descriptions
 
 
 
