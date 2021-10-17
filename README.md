@@ -53,6 +53,41 @@ Dealer interface: A role of BlackJack-like player's. It can prepare a deck of po
 FaceValueCalculable interface: It should be implemented by face value calculators of various BlackJack-like games. It provides uniform motheds protocol, like calculating the total face value of a hand of poker cards, and judging whether the combination of a hand of poker cards is natural. 
 
 
+GameResult enum: 3 game results: Win, Lose, and Draw. 
+
+OrdinaryPlayer interface: A kind of role of BlackJack-like player. It contains basic capabilities of playing a BlackJack-like game, like receiving a poker card, beting, and so on. 
+
+BlackJackFaceValueCalculator class: It implementes the FaceValueCalculable interface, providing specific calculation based on the rules of BlackJack game, like  calculating the total face value of a hand of poker cards, and judging whether the combination of a hand of poker cards is natural.
+
+BlackJackGame class: It's a BlackJack game, inheriting methods and fields from BlackJackLikeGame. It has exclusive methods like processing split action and double-up action. 
+
+BlackJackPlayer class: It's a player for BlackJack game, inheriting from BlackJackLikePlayer. 
+
+TriantaEnaFaceValueCalculator class: It implementes the FaceValueCalculable interface, providing specific calculation based on the rules of Trianta Ena game, like  calculating the total face value of a hand of poker cards, and judging whether the combination of a hand of poker cards is natural.
+
+TriantaEnaGame class: It's a Trianta Ena game, inheriting methods and fields from BlackJackLikeGame. It has exclusive methods like processing split action and double-up action. 
+
+TriantaEnaPlayer class: It's a player for TriantaEna game, inheriting from BlackJackLikePlayer. 
+
+ChooseDealerStrategy interface: A method protocal for strategy of choosing a dealer. 
+
+ChooseDealerStrategyImplOrder class: A specific implentation of ChooseDealerStrategy interface, based on sort order of players. It's used in TriantaEnaGame. 
+
+ChooseDealerStategyImplRandom class: A specific implentation of ChooseDealerStrategy interface, based on random. It's used by BlackJackGame. 
+
+HitProcessStrategy interface: A method protocal for strategy of processing the hit action. 
+
+HitProcessStrategyImpl class: A specific implentation of HitProcessStrategy interface, it's used by both BlackJackGame and TriantaEnaGame. 
+
+StandProcessStrategy interface: A method protocal for strategy of processing the stand action. 
+
+StandProcessStrategyImpl class: A specific implentation of StandProcessStrategy interface, it's used by both BlackJackGame and TriantaEnaGame. 
+
+DoubleUpProcessStrategy interface: A method protocal for strategy of double-up action. 
+
+DoubleUpProcessStrategyImpl class: A specific implentation of DoubleUpProcessStrategy interface, it's used by both BlackJackGame.
+
+
 
 
 
