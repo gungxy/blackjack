@@ -182,7 +182,7 @@ We observed the Interface Segregation Principle. For instance, a player can play
 
 We used Table-Driven in the face value conversion and getting the printable rank of a poker card. It's extremely convenient, avoiding using tedious if-statements.
 
-Concise illustration of how we used Table-Driven are as follows. 
+Concise illustration of how we used Table-Driven is following. 
 
 ```java
 int[] FACE_VALUES ={Integer.MIN_VALUE,1,2,3,4,5,6,7,8,9,10,10,10,10};
