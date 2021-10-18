@@ -24,7 +24,7 @@ Welcome to contact [phuang@bu.edu](mailto:phuang@bu.edu) if you encounter any is
 
 In development, the classes are organized as a well-designed structure with packages as follows. 
 
-![structure](structure-1.png)
+![structure](s.png)
 
 
 
