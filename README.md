@@ -178,6 +178,25 @@ We introduced Message Pattern to decouple and eliminate the loop dependency. We 
 
 We observed the Interface Segregation Principle. For instance, a player can play two roles, dealer and ordinary player, in a game, but the player can only play either of them at a time. We abstracted the two roles as two interfaces, Dealer interface, and OrdinaryPlayer interface, both implemented by BlackJackLikePlayer class. Therefore, the game class only needs to focus on the methods of the current role of the players and doesn't need to pay attention to the methods it won't use, like the dealAPokerCard() method when the player is an ordinary player. 
 
+### Singleton Pattern
+
+As the game classes need to be created only once, so we appropriately applied Singleton Pattern  to the game classes. 
+
+```java
+public class BlackJackGame extends BlackJackLikeGame {
+    /**
+     * Singleton Pattern
+     */
+    private BlackJackGame() {
+    }
+    private static BlackJackGame instance = null;
+    public static BlackJackGame getInstance() {
+        if(instance==null) instance=new BlackJackGame();
+        return instance;
+    }
+}
+```
+
 ### Table-Driven 
 
 We used Table-Driven in the face value conversion and getting the printable rank of a poker card. It's extremely convenient, avoiding using tedious if-statements.
