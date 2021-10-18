@@ -144,7 +144,15 @@ A specific implementation of StandProcessStrategy interface, it's used by both B
 
 ##### DoubleUpProcessStrategyImpl class
 
-A specific implementation of DoubleUpProcessStrategy interface, it's used by both BlackJackGame.
+A specific implementation of DoubleUpProcessStrategy interface, it's used by BlackJackGame.
+
+##### SplitProcessStrategy interface
+
+ A method protocol for the strategy of split action. 
+
+##### SplitProcessStrategyImpl class
+
+A specific implementation of SplitProcessStrategy interface, it's used by BlackJackGame.
 
 
 
