@@ -154,7 +154,7 @@ A specific implementation of DoubleUpProcessStrategy interface, it's used by bot
 
 ### Scalability
 
-The games can be easily scaled to multiple players, multiple decks of poker cards, multiple hands of poker cards and so on, because these entries are stored in the List data type, by which we mean their numbers are not fixed. 
+The games can be easily scaled to multiple players, multiple decks of poker cards, multiple hands of poker cards and so on, because these entries are stored in the List data type, by which we mean their numbers are not fixed, for example, you can play the our BlackJack with more than 2 live players. 
 
 ### Extensibility by Strategy Pattern 
 
