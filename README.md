@@ -90,6 +90,8 @@ DoubleUpProcessStrategyImpl class: A specific implentation of DoubleUpProcessStr
 
 
 
+![](diagram.jpg)
+
 
 **to be continued**
 
