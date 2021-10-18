@@ -182,6 +182,26 @@ As seen in the UML diagram, there isn't any loop dependency at all. However, it 
 
 We introduced Message Pattern to decouple and eliminate the loop dependency. We created the Action class to serve as the medium to deliver messages of actions (hit, stand, etc) from the player to the game. After receiving the message, the game responds to the action using the corresponding strategies. Thus, we decoupled greatly for these two closely related classes, and achieved a low level of coupling in the whole project. 
 
+```java
+while(true) {
+  boolean actionSuccessful;
+  Action action = player.act();
+  if (action == Action.HIT) {
+    actionSuccessful = processHit(player, dealer);
+  }else if (action == Action.STAND) {
+    actionSuccessful=processStand(playersThatStood, player);
+  }else if (action == Action.SPLIT) {
+    actionSuccessful=processSplit(player,bets,dealer);
+  }else if (action == Action.DOUBLE_UP) {
+    actionSuccessful=processDoubleUp(player,playersThatStood,dealer,bets);
+  }else{
+    actionSuccessful=ACTION_FAILED;
+  }
+  if(actionSuccessful) break;
+}
+
+```
+
 ### Interface Segregation Principle
 
 We observed the Interface Segregation Principle. For instance, a player can play two roles, dealer and ordinary player, in a game, but the player can only play either of them at a time. We abstracted the two roles as two interfaces, Dealer interface, and OrdinaryPlayer interface, both implemented by BlackJackLikePlayer class. Therefore, the game class only needs to focus on the methods of the current role of the players and doesn't need to pay attention to the methods it won't use, like the dealAPokerCard() method when the player is an ordinary player. 
