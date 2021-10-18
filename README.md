@@ -190,7 +190,7 @@ String[] RANKS_PRINTED={"ERROR!","A","2","3","4","5","6","7","8","9","10","J","Q
 
 int rankCode=11;//1 for A, 11 for J, 12 for Q, 13 for K, 2 to 10 for 2 to 10
 
-faceValue=FACE_VALUEs[rankCode];
+faceValue=FACE_VALUES[rankCode];
 rankPrinted=RANKS_PRINTED[rankCode];
 
 ```
