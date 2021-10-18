@@ -172,7 +172,7 @@ Last but not least, with **Strategy Pattern**, hereafter, the game can be easily
 
 As seen in the UML diagram, there isn't any loop dependency at all. However, it wasn't as this in the beginning. When we were designing the player class and the game class, the game class hold a reference of player class as a member variable, and at the same time, the player class invoked the methods of game class when the player was performing an action. This design formed high coupling between player and game with loop dependency, and we're prone to do like this. 
 
-We introduced Message Pattern to decouple and eliminate the loop dependency. We created the Action class to serve as the medium to deliver messages of actions (hit, stand, etc) from the player to the game. After receiving the message, the game responds to the action using the correspondant strategies. Thus, we decoupled greatly for these two closely related classes, and achieved a low level of coupling in the whole project. 
+We introduced Message Pattern to decouple and eliminate the loop dependency. We created the Action class to serve as the medium to deliver messages of actions (hit, stand, etc) from the player to the game. After receiving the message, the game responds to the action using the corresponding strategies. Thus, we decoupled greatly for these two closely related classes, and achieved a low level of coupling in the whole project. 
 
 ### Interface Segregation Principle
 
